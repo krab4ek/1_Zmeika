@@ -19,4 +19,10 @@ while True:
     #drawing snake
     [(pygame.draw.rect(sc,pygame.Color('green'),(i,j,SIZE,SIZE))) for i,j in snake]
     pygame.draw.rect(sc,pygame.Color('red'),(*apple,SIZE,SIZE))
-    
+
+pygame.display.flip()
+clock.tick(fps)
+
+for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+        exit()
